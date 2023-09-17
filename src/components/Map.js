@@ -33,3 +33,22 @@ const styles = StyleSheet.create({
 });
 
 export default Map;
+
+// const startWatching = async () => {
+//   try {
+//     const { granted } = await requestPermissionsAsync();
+//     if (!granted) {
+//       throw new Error('Location permission not granted');
+//     }
+//   } catch (e) {
+//     setErr(e);
+//   }
+// };
+
+// You will need to update the import:
+
+// import { requestForegroundPermissionsAsync } from 'expo-location';
+
+// As well as the request in the startWatching method:
+
+// const { granted } = await requestForegroundPermissionsAsync();
