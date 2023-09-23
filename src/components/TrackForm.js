@@ -12,10 +12,17 @@ const TrackForm = () => {
       <Spacer>
         <Input value={name} onChangeText={changeName} placeholder="Enter Track Name" />
       </Spacer>
-      {recording ? 
-        <Button title="Stop Recording" onPress={stopRecording} /> :
-        <Button onPress={startRecording} title="Start Recording" />
-      }
+      <Spacer>
+        {recording ? 
+          <Button title="Stop Recording" onPress={stopRecording} /> :
+          <Button onPress={startRecording} title="Start Recording" />
+        }
+      </Spacer>
+      <Spacer>
+        {!recording && LocationSubscriber.length ?
+          <Button title="Save Recording" /> : null
+        }
+      </Spacer>
     </>
   )
 }
